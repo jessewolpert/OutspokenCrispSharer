@@ -1,3 +1,12 @@
+//Name: Jessica Wolpert
+// Course: Physical Computing
+// Assignment: Term 2 Final Project
+// Project Title: The Outspoken Crisp Sharer
+// References 
+// Used the following libraries:
+//Adafruit_VS1053 for the music maker
+//Adafruit_MotorShield for the motor shield
+//HX711 for the load cell amplifier
 
 // MUSIC
 #include <SPI.h>
