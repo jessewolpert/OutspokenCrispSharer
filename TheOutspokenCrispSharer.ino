@@ -96,7 +96,8 @@ void loop() {
     shareCrisps();
   }
 
-  if ((currentWeight <= 1327) && (currentWeight > 0) && crispSharingStarted) // start again as crisps are finished - 1327 is weight of bowl
+  if ((currentWeight <= 1327) && (currentWeight > 0) && crispSharingStarted) // start again as crisps are finished  
+    // 1327 is weight of bowl
     // have to check greater than 0 as sometimes goes negative values
   {
     crispsFinished();
