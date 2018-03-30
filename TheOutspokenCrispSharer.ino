@@ -148,7 +148,8 @@ void bowlFillingRequest()
     delay(6000); //allow tiem for cage to be put on
     musicPlayer.playFullFile("Turning.mp3"); // tell the user you are turning
     myMotor->step(305, FORWARD, SINGLE); // move forward 180 degrees
-    maxCanBe = int(scale.get_units() * 100 ); // check weight again in case didnt get final weight before turning and more crisps were taken
+    maxCanBe = int(scale.get_units() * 100 ); // check weight again in case didnt get final weight before turning 
+    //and more crisps were taken
     if (maxCanBe > 3) // if there are still crisps in the bowl
     { musicPlayer.playFullFile("Crisp1A.mp3"); //tell them to take first crisp
     }
@@ -216,7 +217,8 @@ void shareCrisps()
       }
     }
     // if you HAVE taken enough crisps and there are still crisps in bowl
-    else if ((totalCrispsTaken - minimumCrispsHaveToTake >= 3 ) && (int(scale.get_units() * 100) > 1328)) //here we want to give another turn to the other person
+    //here we want to give another turn to the other person
+    else if ((totalCrispsTaken - minimumCrispsHaveToTake >= 3 ) && (int(scale.get_units() * 100) > 1328)) 
     {
 
       if (randomNum == 1)
@@ -235,7 +237,6 @@ void shareCrisps()
       {
         musicPlayer.playFullFile("Leave.mp3");
       }
-
 
       musicPlayer.playFullFile("Turning.mp3");//move hands away as turning cage
       //alternate direction of motor
@@ -262,7 +263,8 @@ void shareCrisps()
       lastTimeICalled = millis();
     }
 
-    //do some funny things and cajole them into taking crisps if none have been taken - check bowl is still there and crisps are still there
+    //do some funny things and cajole them into taking crisps if none have been taken
+    //check bowl is still there and crisps are still there
     if ((millis() - lastTimeICalled) > 5000 && (millis() - lastTimeICalled < 5200) && (int(scale.get_units() * 100) > 1328))
     {
       musicPlayer.playFullFile("Sneeze.mp3");
