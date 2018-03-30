@@ -12,9 +12,6 @@
 #include <SPI.h>
 #include <Adafruit_VS1053.h>
 #include <SD.h>
-#define BREAKOUT_RESET  9
-#define BREAKOUT_CS     10
-#define BREAKOUT_DCS    8
 // These are the pins used for the music maker shield
 #define SHIELD_RESET  -1
 #define SHIELD_CS     7
